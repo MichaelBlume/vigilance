@@ -26594,26 +26594,26 @@ vigilance.client.delayed_put = function delayed_put(c, l_millis, v) {
   var c__4577__auto__ = cljs.core.async.chan.call(null, 1);
   cljs.core.async.impl.dispatch.run.call(null, function() {
     var f__4578__auto__ = function() {
-      var switch__4443__auto__ = function(state_18149) {
-        var state_val_18150 = state_18149[1];
-        if(state_val_18150 === 3) {
-          var inst_18147 = state_18149[2];
-          var state_18149__$1 = state_18149;
-          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18149__$1, inst_18147)
+      var switch__4443__auto__ = function(state_21629) {
+        var state_val_21630 = state_21629[1];
+        if(state_val_21630 === 3) {
+          var inst_21627 = state_21629[2];
+          var state_21629__$1 = state_21629;
+          return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_21629__$1, inst_21627)
         }else {
-          if(state_val_18150 === 2) {
-            var inst_18145 = state_18149[2];
-            var state_18149__$1 = function() {
-              var statearr_18151 = state_18149;
-              statearr_18151[5] = inst_18145;
-              return statearr_18151
+          if(state_val_21630 === 2) {
+            var inst_21625 = state_21629[2];
+            var state_21629__$1 = function() {
+              var statearr_21631 = state_21629;
+              statearr_21631[5] = inst_21625;
+              return statearr_21631
             }();
-            return cljs.core.async.impl.ioc_helpers.put_BANG_.call(null, state_18149__$1, 3, c, v)
+            return cljs.core.async.impl.ioc_helpers.put_BANG_.call(null, state_21629__$1, 3, c, v)
           }else {
-            if(state_val_18150 === 1) {
-              var inst_18143 = cljs.core.async.timeout.call(null, l_millis);
-              var state_18149__$1 = state_18149;
-              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18149__$1, 2, inst_18143)
+            if(state_val_21630 === 1) {
+              var inst_21623 = cljs.core.async.timeout.call(null, l_millis);
+              var state_21629__$1 = state_21629;
+              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_21629__$1, 2, inst_21623)
             }else {
               return null
             }
@@ -26624,14 +26624,14 @@ vigilance.client.delayed_put = function delayed_put(c, l_millis, v) {
         return function() {
           var state_machine__4444__auto__ = null;
           var state_machine__4444__auto____0 = function() {
-            var statearr_18153 = new Array(6);
-            statearr_18153[0] = state_machine__4444__auto__;
-            statearr_18153[1] = 1;
-            return statearr_18153
+            var statearr_21633 = new Array(6);
+            statearr_21633[0] = state_machine__4444__auto__;
+            statearr_21633[1] = 1;
+            return statearr_21633
           };
-          var state_machine__4444__auto____1 = function(state_18149) {
+          var state_machine__4444__auto____1 = function(state_21629) {
             while(true) {
-              var result__4445__auto__ = switch__4443__auto__.call(null, state_18149);
+              var result__4445__auto__ = switch__4443__auto__.call(null, state_21629);
               if(result__4445__auto__ === "\ufdd0:recur") {
                 continue
               }else {
@@ -26640,12 +26640,12 @@ vigilance.client.delayed_put = function delayed_put(c, l_millis, v) {
               break
             }
           };
-          state_machine__4444__auto__ = function(state_18149) {
+          state_machine__4444__auto__ = function(state_21629) {
             switch(arguments.length) {
               case 0:
                 return state_machine__4444__auto____0.call(this);
               case 1:
-                return state_machine__4444__auto____1.call(this, state_18149)
+                return state_machine__4444__auto____1.call(this, state_21629)
             }
             throw new Error("Invalid arity: " + arguments.length);
           };
@@ -26656,9 +26656,9 @@ vigilance.client.delayed_put = function delayed_put(c, l_millis, v) {
       }(switch__4443__auto__)
     }();
     var state__4579__auto__ = function() {
-      var statearr_18154 = f__4578__auto__.call(null);
-      statearr_18154[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
-      return statearr_18154
+      var statearr_21634 = f__4578__auto__.call(null);
+      statearr_21634[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
+      return statearr_21634
     }();
     return cljs.core.async.impl.ioc_helpers.run_state_machine.call(null, state__4579__auto__)
   });
@@ -26668,79 +26668,79 @@ vigilance.client.stream_in_fires = function stream_in_fires(c, interval, fire_le
   var c__4577__auto__ = cljs.core.async.chan.call(null, 1);
   cljs.core.async.impl.dispatch.run.call(null, function() {
     var f__4578__auto__ = function() {
-      var switch__4443__auto__ = function(state_18203) {
-        var state_val_18204 = state_18203[1];
-        if(state_val_18204 === 8) {
-          var inst_18194 = state_18203[2];
-          var inst_18195 = vigilance.client.delayed_put.call(null, c, fire_length, "\ufdd0:end-fire");
-          var inst_18196 = vigilance.client.delayed_put.call(null, c, smolder_length, "\ufdd0:end-smolder");
-          var state_18203__$1 = function() {
-            var statearr_18205 = state_18203;
-            statearr_18205[5] = inst_18194;
-            statearr_18205[6] = inst_18195;
-            return statearr_18205
+      var switch__4443__auto__ = function(state_21683) {
+        var state_val_21684 = state_21683[1];
+        if(state_val_21684 === 8) {
+          var inst_21674 = state_21683[2];
+          var inst_21675 = vigilance.client.delayed_put.call(null, c, fire_length, "\ufdd0:end-fire");
+          var inst_21676 = vigilance.client.delayed_put.call(null, c, smolder_length, "\ufdd0:end-smolder");
+          var state_21683__$1 = function() {
+            var statearr_21685 = state_21683;
+            statearr_21685[5] = inst_21675;
+            statearr_21685[6] = inst_21674;
+            return statearr_21685
           }();
-          var statearr_18206_18217 = state_18203__$1;
-          statearr_18206_18217[2] = inst_18196;
-          statearr_18206_18217[1] = 7;
+          var statearr_21686_21697 = state_21683__$1;
+          statearr_21686_21697[2] = inst_21676;
+          statearr_21686_21697[1] = 7;
           return"\ufdd0:recur"
         }else {
-          if(state_val_18204 === 7) {
-            var inst_18199 = state_18203[2];
-            var state_18203__$1 = function() {
-              var statearr_18207 = state_18203;
-              statearr_18207[7] = inst_18199;
-              return statearr_18207
+          if(state_val_21684 === 7) {
+            var inst_21679 = state_21683[2];
+            var state_21683__$1 = function() {
+              var statearr_21687 = state_21683;
+              statearr_21687[7] = inst_21679;
+              return statearr_21687
             }();
-            var statearr_18208_18218 = state_18203__$1;
-            statearr_18208_18218[2] = null;
-            statearr_18208_18218[1] = 2;
+            var statearr_21688_21698 = state_21683__$1;
+            statearr_21688_21698[2] = null;
+            statearr_21688_21698[1] = 2;
             return"\ufdd0:recur"
           }else {
-            if(state_val_18204 === 6) {
-              var state_18203__$1 = state_18203;
-              var statearr_18209_18219 = state_18203__$1;
-              statearr_18209_18219[2] = null;
-              statearr_18209_18219[1] = 7;
+            if(state_val_21684 === 6) {
+              var state_21683__$1 = state_21683;
+              var statearr_21689_21699 = state_21683__$1;
+              statearr_21689_21699[2] = null;
+              statearr_21689_21699[1] = 7;
               return"\ufdd0:recur"
             }else {
-              if(state_val_18204 === 5) {
-                var state_18203__$1 = state_18203;
-                return cljs.core.async.impl.ioc_helpers.put_BANG_.call(null, state_18203__$1, 8, c, "\ufdd0:fire")
+              if(state_val_21684 === 5) {
+                var state_21683__$1 = state_21683;
+                return cljs.core.async.impl.ioc_helpers.put_BANG_.call(null, state_21683__$1, 8, c, "\ufdd0:fire")
               }else {
-                if(state_val_18204 === 4) {
-                  var inst_18189 = state_18203[2];
-                  var inst_18190 = cljs.core.deref.call(null, astate);
-                  var inst_18191 = vigilance.client.time_to_fire.call(null, inst_18190, interval, smolder_length);
-                  var state_18203__$1 = function() {
-                    var statearr_18210 = state_18203;
-                    statearr_18210[8] = inst_18189;
-                    return statearr_18210
+                if(state_val_21684 === 4) {
+                  var inst_21669 = state_21683[2];
+                  var inst_21670 = cljs.core.deref.call(null, astate);
+                  var inst_21671 = vigilance.client.time_to_fire.call(null, inst_21670, interval, smolder_length);
+                  var state_21683__$1 = function() {
+                    var statearr_21690 = state_21683;
+                    statearr_21690[8] = inst_21669;
+                    return statearr_21690
                   }();
-                  if(cljs.core.truth_(inst_18191)) {
-                    var statearr_18211_18220 = state_18203__$1;
-                    statearr_18211_18220[1] = 5
+                  if(cljs.core.truth_(inst_21671)) {
+                    var statearr_21691_21700 = state_21683__$1;
+                    statearr_21691_21700[1] = 5
                   }else {
-                    var statearr_18212_18221 = state_18203__$1;
-                    statearr_18212_18221[1] = 6
+                    var statearr_21692_21701 = state_21683__$1;
+                    statearr_21692_21701[1] = 6
                   }
                   return"\ufdd0:recur"
                 }else {
-                  if(state_val_18204 === 3) {
-                    var inst_18201 = state_18203[2];
-                    var state_18203__$1 = state_18203;
-                    return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18203__$1, inst_18201)
+                  if(state_val_21684 === 3) {
+                    var inst_21681 = state_21683[2];
+                    var state_21683__$1 = state_21683;
+                    return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_21683__$1, inst_21681)
                   }else {
-                    if(state_val_18204 === 2) {
-                      var inst_18187 = cljs.core.async.timeout.call(null, interval);
-                      var state_18203__$1 = state_18203;
-                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18203__$1, 4, inst_18187)
+                    if(state_val_21684 === 2) {
+                      var inst_21667 = cljs.core.async.timeout.call(null, interval);
+                      var state_21683__$1 = state_21683;
+                      return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_21683__$1, 4, inst_21667)
                     }else {
-                      if(state_val_18204 === 1) {
-                        var state_18203__$1 = state_18203;
-                        var statearr_18213_18222 = state_18203__$1;
-                        statearr_18213_18222[2] = null;
-                        statearr_18213_18222[1] = 2;
+                      if(state_val_21684 === 1) {
+                        var state_21683__$1 = state_21683;
+                        var statearr_21693_21702 = state_21683__$1;
+                        statearr_21693_21702[2] = null;
+                        statearr_21693_21702[1] = 2;
                         return"\ufdd0:recur"
                       }else {
                         return null
@@ -26757,14 +26757,14 @@ vigilance.client.stream_in_fires = function stream_in_fires(c, interval, fire_le
         return function() {
           var state_machine__4444__auto__ = null;
           var state_machine__4444__auto____0 = function() {
-            var statearr_18215 = new Array(9);
-            statearr_18215[0] = state_machine__4444__auto__;
-            statearr_18215[1] = 1;
-            return statearr_18215
+            var statearr_21695 = new Array(9);
+            statearr_21695[0] = state_machine__4444__auto__;
+            statearr_21695[1] = 1;
+            return statearr_21695
           };
-          var state_machine__4444__auto____1 = function(state_18203) {
+          var state_machine__4444__auto____1 = function(state_21683) {
             while(true) {
-              var result__4445__auto__ = switch__4443__auto__.call(null, state_18203);
+              var result__4445__auto__ = switch__4443__auto__.call(null, state_21683);
               if(result__4445__auto__ === "\ufdd0:recur") {
                 continue
               }else {
@@ -26773,12 +26773,12 @@ vigilance.client.stream_in_fires = function stream_in_fires(c, interval, fire_le
               break
             }
           };
-          state_machine__4444__auto__ = function(state_18203) {
+          state_machine__4444__auto__ = function(state_21683) {
             switch(arguments.length) {
               case 0:
                 return state_machine__4444__auto____0.call(this);
               case 1:
-                return state_machine__4444__auto____1.call(this, state_18203)
+                return state_machine__4444__auto____1.call(this, state_21683)
             }
             throw new Error("Invalid arity: " + arguments.length);
           };
@@ -26789,9 +26789,9 @@ vigilance.client.stream_in_fires = function stream_in_fires(c, interval, fire_le
       }(switch__4443__auto__)
     }();
     var state__4579__auto__ = function() {
-      var statearr_18216 = f__4578__auto__.call(null);
-      statearr_18216[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
-      return statearr_18216
+      var statearr_21696 = f__4578__auto__.call(null);
+      statearr_21696[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
+      return statearr_21696
     }();
     return cljs.core.async.impl.ioc_helpers.run_state_machine.call(null, state__4579__auto__)
   });
@@ -26802,16 +26802,16 @@ vigilance.client.stream_in_clicks = function stream_in_clicks(c) {
     var c__4577__auto__ = cljs.core.async.chan.call(null, 1);
     cljs.core.async.impl.dispatch.run.call(null, function() {
       var f__4578__auto__ = function() {
-        var switch__4443__auto__ = function(state_18234) {
-          var state_val_18235 = state_18234[1];
-          if(state_val_18235 === 2) {
-            var inst_18232 = state_18234[2];
-            var state_18234__$1 = state_18234;
-            return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18234__$1, inst_18232)
+        var switch__4443__auto__ = function(state_21714) {
+          var state_val_21715 = state_21714[1];
+          if(state_val_21715 === 2) {
+            var inst_21712 = state_21714[2];
+            var state_21714__$1 = state_21714;
+            return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_21714__$1, inst_21712)
           }else {
-            if(state_val_18235 === 1) {
-              var state_18234__$1 = state_18234;
-              return cljs.core.async.impl.ioc_helpers.put_BANG_.call(null, state_18234__$1, 2, c, "\ufdd0:click")
+            if(state_val_21715 === 1) {
+              var state_21714__$1 = state_21714;
+              return cljs.core.async.impl.ioc_helpers.put_BANG_.call(null, state_21714__$1, 2, c, "\ufdd0:click")
             }else {
               return null
             }
@@ -26821,14 +26821,14 @@ vigilance.client.stream_in_clicks = function stream_in_clicks(c) {
           return function() {
             var state_machine__4444__auto__ = null;
             var state_machine__4444__auto____0 = function() {
-              var statearr_18237 = new Array(5);
-              statearr_18237[0] = state_machine__4444__auto__;
-              statearr_18237[1] = 1;
-              return statearr_18237
+              var statearr_21717 = new Array(5);
+              statearr_21717[0] = state_machine__4444__auto__;
+              statearr_21717[1] = 1;
+              return statearr_21717
             };
-            var state_machine__4444__auto____1 = function(state_18234) {
+            var state_machine__4444__auto____1 = function(state_21714) {
               while(true) {
-                var result__4445__auto__ = switch__4443__auto__.call(null, state_18234);
+                var result__4445__auto__ = switch__4443__auto__.call(null, state_21714);
                 if(result__4445__auto__ === "\ufdd0:recur") {
                   continue
                 }else {
@@ -26837,12 +26837,12 @@ vigilance.client.stream_in_clicks = function stream_in_clicks(c) {
                 break
               }
             };
-            state_machine__4444__auto__ = function(state_18234) {
+            state_machine__4444__auto__ = function(state_21714) {
               switch(arguments.length) {
                 case 0:
                   return state_machine__4444__auto____0.call(this);
                 case 1:
-                  return state_machine__4444__auto____1.call(this, state_18234)
+                  return state_machine__4444__auto____1.call(this, state_21714)
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
@@ -26853,9 +26853,9 @@ vigilance.client.stream_in_clicks = function stream_in_clicks(c) {
         }(switch__4443__auto__)
       }();
       var state__4579__auto__ = function() {
-        var statearr_18238 = f__4578__auto__.call(null);
-        statearr_18238[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
-        return statearr_18238
+        var statearr_21718 = f__4578__auto__.call(null);
+        statearr_21718[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
+        return statearr_21718
       }();
       return cljs.core.async.impl.ioc_helpers.run_state_machine.call(null, state__4579__auto__)
     });
@@ -26890,9 +26890,9 @@ vigilance.client.start_fire = function start_fire(state) {
 };
 vigilance.client.event_handler = function event_handler(state, event, event_stream) {
   var event__$1 = event;
-  var ocr_18261 = (new cljs.core.Keyword("\ufdd0:state")).call(null, state);
+  var ocr_21741 = (new cljs.core.Keyword("\ufdd0:state")).call(null, state);
   try {
-    if(cljs.core._EQ_.call(null, ocr_18261, "\ufdd0:finished")) {
+    if(cljs.core._EQ_.call(null, ocr_21741, "\ufdd0:finished")) {
       return state
     }else {
       if("\ufdd0:else") {
@@ -26901,9 +26901,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
         return null
       }
     }
-  }catch(e18273) {
-    if(e18273 instanceof Error) {
-      var e__5089__auto__ = e18273;
+  }catch(e21753) {
+    if(e21753 instanceof Error) {
+      var e__5089__auto__ = e21753;
       if(e__5089__auto__ === cljs.core.match.backtrack) {
         try {
           if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:finish")) {
@@ -26911,7 +26911,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
           }else {
             if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:fire")) {
               try {
-                if(cljs.core._EQ_.call(null, ocr_18261, "\ufdd0:waiting")) {
+                if(cljs.core._EQ_.call(null, ocr_21741, "\ufdd0:waiting")) {
                   return vigilance.client.start_fire.call(null, state)
                 }else {
                   if("\ufdd0:else") {
@@ -26920,9 +26920,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                     return null
                   }
                 }
-              }catch(e18280) {
-                if(e18280 instanceof Error) {
-                  var e__5089__auto____$1 = e18280;
+              }catch(e21760) {
+                if(e21760 instanceof Error) {
+                  var e__5089__auto____$1 = e21760;
                   if(e__5089__auto____$1 === cljs.core.match.backtrack) {
                     throw cljs.core.match.backtrack;
                   }else {
@@ -26930,7 +26930,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                   }
                 }else {
                   if("\ufdd0:else") {
-                    throw e18280;
+                    throw e21760;
                   }else {
                     return null
                   }
@@ -26940,16 +26940,16 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
               if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:end-fire")) {
                 try {
                   if(function() {
-                    var and__3941__auto__ = cljs.core.vector_QMARK_.call(null, ocr_18261);
+                    var and__3941__auto__ = cljs.core.vector_QMARK_.call(null, ocr_21741);
                     if(and__3941__auto__) {
-                      return cljs.core.count.call(null, ocr_18261) === 2
+                      return cljs.core.count.call(null, ocr_21741) === 2
                     }else {
                       return and__3941__auto__
                     }
                   }()) {
                     try {
-                      var ocr_18261_0__18269 = cljs.core.nth.call(null, ocr_18261, 0);
-                      if(cljs.core._EQ_.call(null, ocr_18261_0__18269, "\ufdd0:fire")) {
+                      var ocr_21741_0__21749 = cljs.core.nth.call(null, ocr_21741, 0);
+                      if(cljs.core._EQ_.call(null, ocr_21741_0__21749, "\ufdd0:fire")) {
                         return vigilance.client.missed_fire.call(null, state)
                       }else {
                         if("\ufdd0:else") {
@@ -26958,9 +26958,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                           return null
                         }
                       }
-                    }catch(e18282) {
-                      if(e18282 instanceof Error) {
-                        var e__5089__auto____$1 = e18282;
+                    }catch(e21762) {
+                      if(e21762 instanceof Error) {
+                        var e__5089__auto____$1 = e21762;
                         if(e__5089__auto____$1 === cljs.core.match.backtrack) {
                           throw cljs.core.match.backtrack;
                         }else {
@@ -26968,7 +26968,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                         }
                       }else {
                         if("\ufdd0:else") {
-                          throw e18282;
+                          throw e21762;
                         }else {
                           return null
                         }
@@ -26981,9 +26981,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                       return null
                     }
                   }
-                }catch(e18281) {
-                  if(e18281 instanceof Error) {
-                    var e__5089__auto____$1 = e18281;
+                }catch(e21761) {
+                  if(e21761 instanceof Error) {
+                    var e__5089__auto____$1 = e21761;
                     if(e__5089__auto____$1 === cljs.core.match.backtrack) {
                       throw cljs.core.match.backtrack;
                     }else {
@@ -26991,7 +26991,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                     }
                   }else {
                     if("\ufdd0:else") {
-                      throw e18281;
+                      throw e21761;
                     }else {
                       return null
                     }
@@ -27006,9 +27006,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
               }
             }
           }
-        }catch(e18274) {
-          if(e18274 instanceof Error) {
-            var e__5089__auto____$1 = e18274;
+        }catch(e21754) {
+          if(e21754 instanceof Error) {
+            var e__5089__auto____$1 = e21754;
             if(e__5089__auto____$1 === cljs.core.match.backtrack) {
               try {
                 if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:end-fire")) {
@@ -27016,7 +27016,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                 }else {
                   if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:end-smolder")) {
                     try {
-                      if(cljs.core._EQ_.call(null, ocr_18261, "\ufdd0:smolder")) {
+                      if(cljs.core._EQ_.call(null, ocr_21741, "\ufdd0:smolder")) {
                         return cljs.core.assoc.call(null, state, "\ufdd0:state", "\ufdd0:waiting")
                       }else {
                         if("\ufdd0:else") {
@@ -27025,9 +27025,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                           return null
                         }
                       }
-                    }catch(e18277) {
-                      if(e18277 instanceof Error) {
-                        var e__5089__auto____$2 = e18277;
+                    }catch(e21757) {
+                      if(e21757 instanceof Error) {
+                        var e__5089__auto____$2 = e21757;
                         if(e__5089__auto____$2 === cljs.core.match.backtrack) {
                           throw cljs.core.match.backtrack;
                         }else {
@@ -27035,7 +27035,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                         }
                       }else {
                         if("\ufdd0:else") {
-                          throw e18277;
+                          throw e21757;
                         }else {
                           return null
                         }
@@ -27045,17 +27045,17 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                     if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:click")) {
                       try {
                         if(function() {
-                          var and__3941__auto__ = cljs.core.vector_QMARK_.call(null, ocr_18261);
+                          var and__3941__auto__ = cljs.core.vector_QMARK_.call(null, ocr_21741);
                           if(and__3941__auto__) {
-                            return cljs.core.count.call(null, ocr_18261) === 2
+                            return cljs.core.count.call(null, ocr_21741) === 2
                           }else {
                             return and__3941__auto__
                           }
                         }()) {
                           try {
-                            var ocr_18261_0__18271 = cljs.core.nth.call(null, ocr_18261, 0);
-                            if(cljs.core._EQ_.call(null, ocr_18261_0__18271, "\ufdd0:fire")) {
-                              var start_millis = cljs.core.nth.call(null, ocr_18261, 1);
+                            var ocr_21741_0__21751 = cljs.core.nth.call(null, ocr_21741, 0);
+                            if(cljs.core._EQ_.call(null, ocr_21741_0__21751, "\ufdd0:fire")) {
+                              var start_millis = cljs.core.nth.call(null, ocr_21741, 1);
                               return vigilance.client.fire_click.call(null, state, start_millis)
                             }else {
                               if("\ufdd0:else") {
@@ -27064,9 +27064,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                                 return null
                               }
                             }
-                          }catch(e18279) {
-                            if(e18279 instanceof Error) {
-                              var e__5089__auto____$2 = e18279;
+                          }catch(e21759) {
+                            if(e21759 instanceof Error) {
+                              var e__5089__auto____$2 = e21759;
                               if(e__5089__auto____$2 === cljs.core.match.backtrack) {
                                 throw cljs.core.match.backtrack;
                               }else {
@@ -27074,7 +27074,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                               }
                             }else {
                               if("\ufdd0:else") {
-                                throw e18279;
+                                throw e21759;
                               }else {
                                 return null
                               }
@@ -27087,9 +27087,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                             return null
                           }
                         }
-                      }catch(e18278) {
-                        if(e18278 instanceof Error) {
-                          var e__5089__auto____$2 = e18278;
+                      }catch(e21758) {
+                        if(e21758 instanceof Error) {
+                          var e__5089__auto____$2 = e21758;
                           if(e__5089__auto____$2 === cljs.core.match.backtrack) {
                             throw cljs.core.match.backtrack;
                           }else {
@@ -27097,7 +27097,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                           }
                         }else {
                           if("\ufdd0:else") {
-                            throw e18278;
+                            throw e21758;
                           }else {
                             return null
                           }
@@ -27112,9 +27112,9 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                     }
                   }
                 }
-              }catch(e18275) {
-                if(e18275 instanceof Error) {
-                  var e__5089__auto____$2 = e18275;
+              }catch(e21755) {
+                if(e21755 instanceof Error) {
+                  var e__5089__auto____$2 = e21755;
                   if(e__5089__auto____$2 === cljs.core.match.backtrack) {
                     try {
                       if(cljs.core._EQ_.call(null, event__$1, "\ufdd0:click")) {
@@ -27126,19 +27126,19 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                           return null
                         }
                       }
-                    }catch(e18276) {
-                      if(e18276 instanceof Error) {
-                        var e__5089__auto____$3 = e18276;
+                    }catch(e21756) {
+                      if(e21756 instanceof Error) {
+                        var e__5089__auto____$3 = e21756;
                         if(e__5089__auto____$3 === cljs.core.match.backtrack) {
                           var e = event__$1;
-                          var s = ocr_18261;
+                          var s = ocr_21741;
                           return alert([cljs.core.str("Tell Mike he fucked some logic up."), cljs.core.str(cljs.core.PersistentVector.fromArray([e, s], true))].join(""))
                         }else {
                           throw e__5089__auto____$3;
                         }
                       }else {
                         if("\ufdd0:else") {
-                          throw e18276;
+                          throw e21756;
                         }else {
                           return null
                         }
@@ -27149,7 +27149,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
                   }
                 }else {
                   if("\ufdd0:else") {
-                    throw e18275;
+                    throw e21755;
                   }else {
                     return null
                   }
@@ -27160,7 +27160,7 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
             }
           }else {
             if("\ufdd0:else") {
-              throw e18274;
+              throw e21754;
             }else {
               return null
             }
@@ -27171,57 +27171,58 @@ vigilance.client.event_handler = function event_handler(state, event, event_stre
       }
     }else {
       if("\ufdd0:else") {
-        throw e18273;
+        throw e21753;
       }else {
         return null
       }
     }
   }
 };
-vigilance.client.main = function main(p__18283) {
-  var map__18300 = p__18283;
-  var map__18300__$1 = cljs.core.seq_QMARK_.call(null, map__18300) ? cljs.core.apply.call(null, cljs.core.hash_map, map__18300) : map__18300;
-  var smolder_length = cljs.core.get.call(null, map__18300__$1, "\ufdd0:smolder-length");
-  var fire_length = cljs.core.get.call(null, map__18300__$1, "\ufdd0:fire-length");
-  var duration_millis = cljs.core.get.call(null, map__18300__$1, "\ufdd0:duration-millis");
-  var total_fires = cljs.core.get.call(null, map__18300__$1, "\ufdd0:total-fires");
+vigilance.client.main = function main(p__21763) {
+  var map__21780 = p__21763;
+  var map__21780__$1 = cljs.core.seq_QMARK_.call(null, map__21780) ? cljs.core.apply.call(null, cljs.core.hash_map, map__21780) : map__21780;
+  var check_interval = cljs.core.get.call(null, map__21780__$1, "\ufdd0:check-interval");
+  var smolder_length = cljs.core.get.call(null, map__21780__$1, "\ufdd0:smolder-length");
+  var fire_length = cljs.core.get.call(null, map__21780__$1, "\ufdd0:fire-length");
+  var duration_millis = cljs.core.get.call(null, map__21780__$1, "\ufdd0:duration-millis");
+  var total_fires = cljs.core.get.call(null, map__21780__$1, "\ufdd0:total-fires");
   var astate = cljs.core.atom.call(null, vigilance.client.init_state.call(null, total_fires, duration_millis));
   var event_stream = cljs.core.async.chan.call(null);
-  vigilance.client.stream_in_fires.call(null, event_stream, 100, fire_length, smolder_length, astate);
+  vigilance.client.stream_in_fires.call(null, event_stream, check_interval, fire_length, smolder_length, astate);
   vigilance.client.stream_in_clicks.call(null, event_stream);
   vigilance.client.delayed_put.call(null, event_stream, duration_millis, "\ufdd0:finish");
   var c__4577__auto__ = cljs.core.async.chan.call(null, 1);
   cljs.core.async.impl.dispatch.run.call(null, function() {
     var f__4578__auto__ = function() {
-      var switch__4443__auto__ = function(state_18308) {
-        var state_val_18309 = state_18308[1];
-        if(state_val_18309 === 4) {
-          var inst_18303 = state_18308[2];
-          var inst_18304 = cljs.core.swap_BANG_.call(null, astate, vigilance.client.event_handler, inst_18303, event_stream);
-          var state_18308__$1 = function() {
-            var statearr_18310 = state_18308;
-            statearr_18310[5] = inst_18304;
-            return statearr_18310
+      var switch__4443__auto__ = function(state_21788) {
+        var state_val_21789 = state_21788[1];
+        if(state_val_21789 === 4) {
+          var inst_21783 = state_21788[2];
+          var inst_21784 = cljs.core.swap_BANG_.call(null, astate, vigilance.client.event_handler, inst_21783, event_stream);
+          var state_21788__$1 = function() {
+            var statearr_21790 = state_21788;
+            statearr_21790[5] = inst_21784;
+            return statearr_21790
           }();
-          var statearr_18311_18316 = state_18308__$1;
-          statearr_18311_18316[2] = null;
-          statearr_18311_18316[1] = 2;
+          var statearr_21791_21796 = state_21788__$1;
+          statearr_21791_21796[2] = null;
+          statearr_21791_21796[1] = 2;
           return"\ufdd0:recur"
         }else {
-          if(state_val_18309 === 3) {
-            var inst_18306 = state_18308[2];
-            var state_18308__$1 = state_18308;
-            return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_18308__$1, inst_18306)
+          if(state_val_21789 === 3) {
+            var inst_21786 = state_21788[2];
+            var state_21788__$1 = state_21788;
+            return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_21788__$1, inst_21786)
           }else {
-            if(state_val_18309 === 2) {
-              var state_18308__$1 = state_18308;
-              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_18308__$1, 4, event_stream)
+            if(state_val_21789 === 2) {
+              var state_21788__$1 = state_21788;
+              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_21788__$1, 4, event_stream)
             }else {
-              if(state_val_18309 === 1) {
-                var state_18308__$1 = state_18308;
-                var statearr_18312_18317 = state_18308__$1;
-                statearr_18312_18317[2] = null;
-                statearr_18312_18317[1] = 2;
+              if(state_val_21789 === 1) {
+                var state_21788__$1 = state_21788;
+                var statearr_21792_21797 = state_21788__$1;
+                statearr_21792_21797[2] = null;
+                statearr_21792_21797[1] = 2;
                 return"\ufdd0:recur"
               }else {
                 return null
@@ -27234,14 +27235,14 @@ vigilance.client.main = function main(p__18283) {
         return function() {
           var state_machine__4444__auto__ = null;
           var state_machine__4444__auto____0 = function() {
-            var statearr_18314 = new Array(6);
-            statearr_18314[0] = state_machine__4444__auto__;
-            statearr_18314[1] = 1;
-            return statearr_18314
+            var statearr_21794 = new Array(6);
+            statearr_21794[0] = state_machine__4444__auto__;
+            statearr_21794[1] = 1;
+            return statearr_21794
           };
-          var state_machine__4444__auto____1 = function(state_18308) {
+          var state_machine__4444__auto____1 = function(state_21788) {
             while(true) {
-              var result__4445__auto__ = switch__4443__auto__.call(null, state_18308);
+              var result__4445__auto__ = switch__4443__auto__.call(null, state_21788);
               if(result__4445__auto__ === "\ufdd0:recur") {
                 continue
               }else {
@@ -27250,12 +27251,12 @@ vigilance.client.main = function main(p__18283) {
               break
             }
           };
-          state_machine__4444__auto__ = function(state_18308) {
+          state_machine__4444__auto__ = function(state_21788) {
             switch(arguments.length) {
               case 0:
                 return state_machine__4444__auto____0.call(this);
               case 1:
-                return state_machine__4444__auto____1.call(this, state_18308)
+                return state_machine__4444__auto____1.call(this, state_21788)
             }
             throw new Error("Invalid arity: " + arguments.length);
           };
@@ -27266,11 +27267,12 @@ vigilance.client.main = function main(p__18283) {
       }(switch__4443__auto__)
     }();
     var state__4579__auto__ = function() {
-      var statearr_18315 = f__4578__auto__.call(null);
-      statearr_18315[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
-      return statearr_18315
+      var statearr_21795 = f__4578__auto__.call(null);
+      statearr_21795[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4577__auto__;
+      return statearr_21795
     }();
     return cljs.core.async.impl.ioc_helpers.run_state_machine.call(null, state__4579__auto__)
   });
   return c__4577__auto__
 };
+vigilance.client.main.call(null, cljs.core.PersistentArrayMap.fromArray(["\ufdd0:total-fires", 10, "\ufdd0:duration-millis", 120, "\ufdd0:fire-length", 1E3, "\ufdd0:smolder-length", 2E3, "\ufdd0:check-interval", 200], true));
