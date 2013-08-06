@@ -19,7 +19,8 @@
                                    smolder-millis-remaining)
           intervals-remaining (/ real-millis-remaining interval-millis)
           r (rand-int intervals-remaining)]
-      (< r (:fires-remaining state)))))
+      (and (> millis-remaining 0)
+           (< r (:fires-remaining state))))))
 
 (defn delayed-put [c l-millis v]
   (go (<! (timeout l-millis))
