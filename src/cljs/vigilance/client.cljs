@@ -7,9 +7,19 @@
                    [cljs.core.match.macros :refer [match]]
                    [cljs.core.async.macros :refer [go alt!]]))
 
-(defn time-to-fire [state]
-  ;; TODO
-  false)
+(defn now-millis [] (.getTime (js/Date.)))
+
+(defn time-to-fire [state interval-millis smolder-millis]
+  (when (= (:state state) :waiting)
+    (.log js/console "running time-to-fire")
+    (let [millis-remaining (- (:end-millis state) (now-millis))
+          smolder-millis-remaining (* (:fires-remaining state)
+                                      smolder-millis)
+          real-millis-remaining (- millis-remaining
+                                   smolder-millis-remaining)
+          intervals-remaining (/ real-millis-remaining interval-millis)
+          r (rand-int intervals-remaining)]
+      (< r (:fires-remaining state)))))
 
 (defn sleep [interval]
   (<! (timeout interval)))
@@ -33,8 +43,6 @@
   (on ($ "body") :click "" {}
     (fn [_]
       (>! c :click))))
-
-(defn now-millis [] (.getMilliseconds (js/Date.)))
 
 (defn init-state [total-fires duration-millis]
   (let [start-millis (now-millis)]
