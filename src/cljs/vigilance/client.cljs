@@ -2,7 +2,7 @@
   (:require [cljs.core.async :as async
              :refer [<! >! chan timeout]]
             [cljs.core.match]
-            [jayq.core :refer [$ on]])
+            [jayq.core :refer [$ on css]])
   (:require-macros [vigilance.macros :as macros]
                    [cljs.core.match.macros :refer [match]]
                    [cljs.core.async.macros :refer [go alt!]]))
@@ -46,6 +46,12 @@
      :misfires 0
      :fires-hit 0
      :wait-millis 0}))
+
+(defn set-screen-fire []
+  (css ($ "body") "background-color" "rgb(255,0,0)"))
+
+(defn set-screen-no-fire []
+  (css ($ "body") "background-color" "rgb(255,255,255)"))
 
 (defn missed-fire [state]
   (set-screen-no-fire)
