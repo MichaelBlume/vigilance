@@ -29,7 +29,7 @@
   (go
     (loop []
       (<! (timeout interval))
-      (when (time-to-fire @astate)
+      (when (time-to-fire @astate interval smolder-length)
         (>! c :fire)
         (delayed-put c fire-length :end-fire)
         (delayed-put c smolder-length :end-smolder))
