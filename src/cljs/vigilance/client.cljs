@@ -37,9 +37,9 @@
 
 (defn stream-in-clicks [c]
   ;; We'll see if this actually works
-  (on ($ "body") :click "" {}
+  (.click ($ js/document)
     (fn [_]
-      (>! c :click))))
+      (go (>! c :click)))))
 
 (defn init-state [total-fires duration-millis]
   (let [start-millis (now-millis)]
