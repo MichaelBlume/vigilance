@@ -119,11 +119,12 @@
                  [e s]))))
 
 (defn main [{:keys [total-fires duration-millis
-                    fire-length smolder-length]}]
+                    fire-length smolder-length
+                    check-interval]}]
   (let [astate (atom (init-state total-fires duration-millis))
         event-stream (chan)]
     (stream-in-fires
-      event-stream 100 fire-length smolder-length astate)
+      event-stream check-interval fire-length smolder-length astate)
     (stream-in-clicks event-stream)
     (delayed-put event-stream duration-millis :finish)
     (go
