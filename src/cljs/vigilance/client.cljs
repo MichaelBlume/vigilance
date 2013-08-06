@@ -21,17 +21,14 @@
           r (rand-int intervals-remaining)]
       (< r (:fires-remaining state)))))
 
-(defn sleep [interval]
-  (<! (timeout interval)))
-
 (defn delayed-put [c l-millis v]
-  (go (sleep l-millis)
+  (go (<! (timeout l-millis))
       (>! c v)))
 
 (defn stream-in-fires [c interval fire-length smolder-length astate]
   (go
     (loop []
-      (sleep interval)
+      (<! (timeout interval))
       (when (time-to-fire @astate)
         (>! c :fire)
         (delayed-put c fire-length :end-fire)
