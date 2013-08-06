@@ -92,8 +92,7 @@
          (finish-game state)
 
     [:fire :waiting]
-         (do (set-screen-fire)
-             (assoc state :state [:fire (now-millis)]))
+         (start-fire state)
 
     [:end-fire [:fire _]]
          (missed-fire state)
