@@ -83,7 +83,7 @@
 
 ;; states: [[:fire start-time] :waiting :smolder :finished]
 ;; events: [:click :fire :end-fire :end-smolder :finish]
-(defn event-handler [event state event-stream]
+(defn event-handler [state event event-stream]
   (match [event (:state state)]
     [_ :finished]
          state ;; ignore
