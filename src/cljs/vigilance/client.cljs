@@ -131,3 +131,10 @@
       (loop []
         (swap! astate event-handler (<! event-stream) event-stream)
         (recur)))))
+
+(main
+  {:total-fires 10
+   :duration-millis 120
+   :fire-length 1000
+   :smolder-length 2000
+   :check-interval 200})
