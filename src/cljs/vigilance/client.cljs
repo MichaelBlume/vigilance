@@ -134,7 +134,7 @@
 
 (main
   {:total-fires 10
-   :duration-millis 120
+   :duration-millis 120000
    :fire-length 1000
    :smolder-length 2000
    :check-interval 200})
