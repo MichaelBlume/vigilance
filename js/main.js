@@ -27275,4 +27275,4 @@ vigilance.client.main = function main(p__21763) {
   });
   return c__4577__auto__
 };
-vigilance.client.main.call(null, cljs.core.PersistentArrayMap.fromArray(["\ufdd0:total-fires", 10, "\ufdd0:duration-millis", 120, "\ufdd0:fire-length", 1E3, "\ufdd0:smolder-length", 2E3, "\ufdd0:check-interval", 200], true));
+vigilance.client.main.call(null, cljs.core.PersistentArrayMap.fromArray(["\ufdd0:total-fires", 10, "\ufdd0:duration-millis", 120000, "\ufdd0:fire-length", 1E3, "\ufdd0:smolder-length", 2E3, "\ufdd0:check-interval", 200], true));
