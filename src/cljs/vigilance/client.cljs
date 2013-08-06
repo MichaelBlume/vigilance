@@ -65,7 +65,8 @@
     (update-in [:fires-missed] inc)))
 
 (defn finish-game [state]
-  (js/alert (str state)))
+  (js/alert (str state))
+  (assoc state :state :finished))
 
 (defn fire-click [state start-millis]
   (set-screen-no-fire)
@@ -80,10 +81,13 @@
         (assoc :state [:fire (now-millis)])
         (update-in [:fires-remaining] dec))))
 
-;; states: [[:fire start-time] :waiting :smolder]
+;; states: [[:fire start-time] :waiting :smolder :finished]
 ;; events: [:click :fire :end-fire :end-smolder :finish]
 (defn event-handler [event state event-stream]
   (match [event (:state state)]
+    [_ :finished]
+         state ;; ignore
+
     [:finish _]
          (finish-game state)
 
