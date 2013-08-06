@@ -66,7 +66,12 @@
     (update-in [:fires-missed] inc)))
 
 (defn finish-game [state]
-  (js/alert (str state))
+  (js/alert
+    (str
+      {:misfires (:misfires state)
+       :fires-missed (:fires-missed state)
+       :average-delay (/ (:wait-millis state)
+                         (:fires-hit state))}))
   (assoc state :state :finished))
 
 (defn fire-click [state start-millis]
