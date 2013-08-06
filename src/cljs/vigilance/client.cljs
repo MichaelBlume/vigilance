@@ -41,7 +41,7 @@
     {:state :waiting
      :fires-remaining total-fires
      :start-millis start-millis
-     :end-time (+ start-millis duration-millis)
+     :end-millis (+ start-millis duration-millis)
      :fires-missed 0
      :misfires 0
      :fires-hit 0
