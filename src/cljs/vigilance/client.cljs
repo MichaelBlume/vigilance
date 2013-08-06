@@ -108,7 +108,9 @@
     [:click _]
          (update-in state [:misfires] inc)
 
-    [_ _] (js/alert "Tell Mike he fucked some logic up.")))
+    [e s] (js/alert
+            (str "Tell Mike he fucked some logic up."
+                 [e s]))))
 
 (defn main [{:keys [total-fires duration-millis
                     fire-length smolder-length]}]
