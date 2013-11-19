@@ -89,7 +89,7 @@
 
 ;; states: [[:fire start-time] :waiting :smolder :finished]
 ;; events: [:click :fire :end-fire :end-smolder :finish]
-(defn event-handler [state event event-stream]
+(defn event-handler [state event]
   (match [event (:state state)]
     [_ :finished]
          state ;; ignore
@@ -129,7 +129,7 @@
     (delayed-put event-stream duration-millis :finish)
     (go
       (loop []
-        (swap! astate event-handler (<! event-stream) event-stream)
+        (swap! astate event-handler (<! event-stream))
         (recur)))))
 
 (main
