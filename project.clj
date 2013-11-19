@@ -13,7 +13,7 @@
   :cljsbuild {
     :builds [{:source-paths ["src/cljs"]
               :compiler {:output-to "resources/public/js/main.js"
-                         :optimizations :whitespace
+                         :optimizations :advanced
                          :externs ["resources/jquery-1.9.js"]
                          :pretty-print true}}]}
   :ring {:handler vigilance.routes/app})
